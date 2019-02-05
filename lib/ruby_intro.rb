@@ -2,11 +2,15 @@
 
 # Part 1
 
+#Method takes an integer array of integers as an input
+#Returns the sum of elements in the array
 def sum arr
   # YOUR CODE HERE
   arr.inject(0, :+)
 end
 
+#Method takes an integer array of integers as an input
+#Returns the sum of its two largest elements
 def max_2_sum arr
   # YOUR CODE HERE
   len = arr.length
@@ -20,6 +24,8 @@ def max_2_sum arr
   return sum
 end
 
+#Method takes an integer array of integers as an input and an integer,n 
+#Return true if the integer input is found in the array else false 
 def sum_to_n? arr, n
   # YOUR CODE HERE
   i=0
@@ -36,11 +42,16 @@ end
 
 # Part 2
 
+#Method takes a string as an input
+#Return Hello, {{string value}}
 def hello(name)
   # YOUR CODE HERE
   return "Hello, " + name
 end
 
+
+#Method takes a string as an input
+#Returns true if it starts with a consonant else false
 def starts_with_consonant? s
   # YOUR CODE HERE
   if /^[^aeiou\W]/i.match(s) == nil
@@ -50,6 +61,8 @@ def starts_with_consonant? s
   end
 end
 
+#Method takes a string as an input
+#Returns true if the string represents a binary number that is a multiple of 4 else false 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
   if /[^01]/.match(s) != nil
@@ -90,6 +103,7 @@ class BookInStock
       self.price = price
   end
   
+  #Returns the price of the book formatted with a leading dollar sign 
   def price_as_string
       @price = '%.2f' % @price
       return '$' + @price
